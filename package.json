@@ -1,0 +1,31 @@
+{
+  "name": "trivia-time",
+  "version": "1.0.0",
+  "description": "Build out a Backend that stores trivia questions in different quizzes.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "knex": "^0.13.0",
+    "pg": "^6.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marissa27/trivia-time.git"
+  },
+  "keywords": [],
+  "author": "Marissa Reinke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marissa27/trivia-time/issues"
+  },
+  "homepage": "https://github.com/marissa27/trivia-time#readme"
+}
