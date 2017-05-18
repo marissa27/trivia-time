@@ -16,6 +16,10 @@ exports.seed = function(knex, Promise) {
           {
             title: 'History Quiz 2',
             id: 2
+          },
+          {
+            title: 'History Quiz 3',
+            id: 3
           }
       ])
     ])

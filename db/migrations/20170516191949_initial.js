@@ -2,14 +2,14 @@ exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable('quizzes',
       function(table) {
-      table.increments('id').primary();
-      table.string('title');
+        table.increments('id').primary();
+        table.string('title');
 
-      table.timestamps(true, true);
-  }),
+        table.timestamps(true, true);
+        }),
 
     knex.schema.createTable('questions',
-      function(table) {
+      function (table) {
         table.increments('id').primary();
         table.string('question');
         table.integer('quiz_id').unsigned();
@@ -20,7 +20,7 @@ exports.up = function(knex, Promise) {
       }),
 
       knex.schema.createTable('answers',
-        function(table) {
+        function (table) {
           table.increments('id').primary();
           table.string('answer');
           table.integer('question_id').unsigned();
@@ -32,7 +32,7 @@ exports.up = function(knex, Promise) {
     ]);
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return Promise.all([
     knex.scheme.dropTable('quizzes'),
     knex.scheme.dropTable('questions'),

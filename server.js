@@ -78,7 +78,7 @@ app.post('/api/v1/quizzes/:quiz_id/query', (request, response) => {
   const queryObj = {
     question: request.body.question,
     answer: request.body.answer,
-    quiz_id: request.params.quiz_id
+    quiz_id: request.params.quiz_id,
   };
   if (!queryObj.question) {
     response.status(422).send({
@@ -96,18 +96,16 @@ app.post('/api/v1/quizzes/:quiz_id/query', (request, response) => {
           response.status(201).json(query);
         })
         .catch(error => {
-        console.error('error: ', error)
-      })
-  })}
+        console.error('error: ', error);
+        });
+    });
+  }
 });
 
 if (!module.parent) {
   app.listen(app.get('port'), () => {
-    console.log('Your app is running!')
-  })
+    console.log('Your app is running!');
+  });
 }
 
 module.exports = app;
-
-// 2 PUT OR PATCH endpoints
-// 2 DELETE endpoints
