@@ -1,7 +1,7 @@
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
   return Promise.all([
     knex.schema.createTable('query',
-      function(table) {
+      function (table) {
         table.increments('id').primary();
         table.string('question');
         table.string('answer');
@@ -10,12 +10,12 @@ exports.up = function(knex, Promise) {
           .references('quizzes.id');
 
         table.timestamps(true, true);
-      })
-    ]);
+      }),
+  ]);
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return Promise.all([
-    knex.schema.dropTable('query')
-    ]);
+    knex.schema.dropTable('query'),
+  ]);
 };

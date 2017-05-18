@@ -1,14 +1,14 @@
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
   return Promise.all([
     knex.schema.dropTable('answers'),
-    knex.schema.dropTable('questions')
-    ]);
+    knex.schema.dropTable('questions'),
+  ]);
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return Promise.all([
     knex.schema.createTable('questions',
-      function(table) {
+      function (table) {
         table.increments('id').primary();
         table.string('question');
         table.integer('quiz_id').unsigned();
@@ -18,15 +18,15 @@ exports.down = function(knex, Promise) {
         table.timestamps();
       }),
 
-      knex.schema.createTable('answers',
-        function(table) {
-          table.increments('id').primary();
-          table.string('answer');
-          table.integer('question_id').unsigned();
-          table.foreign('question_id')
-            .references('questions.id');
+    knex.schema.createTable('answers',
+      function (table) {
+        table.increments('id').primary();
+        table.string('answer');
+        table.integer('question_id').unsigned();
+        table.foreign('question_id')
+          .references('questions.id');
 
-          table.timestamps();
-        })
+        table.timestamps();
+      }),
   ]);
 };
