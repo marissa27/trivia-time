@@ -100,6 +100,58 @@ app.post('/api/v1/quizzes/:quiz_id/query', (request, response) => {
   }
 });
 
+// PUT
+app.put('/api/v1/query/override/:id', function (request, response) {
+  database('query').where('id', request.params.id)
+  .update({
+    id: request.body.quiz_id,
+    question: request.body.question,
+    answer: request.body.answer,
+    quiz_id: request.body.quiz_id
+  })
+  .then(() => {
+    database('query').select()
+    .then((query) => {
+      response.status(200).json(query);
+    });
+  });
+});
+
+// PATCH
+app.patch('/api/v1/query/patch/:id', (request, response) => {
+  database('query').where('id', request.params.id)
+  .update({
+    question: request.body.question,
+  })
+  .then(() => {
+    database('query').select()
+    .then((query) => {
+      response.status(200).json(query);
+    });
+  });
+});
+
+// DELETE
+app.delete('/api/v1/query/:id', (request, response) => {
+  database('query').where('id', request.params.id).del()
+  .then(() => {
+    database('query').select()
+    .then((query) => {
+      response.status(200).json(query);
+    });
+  });
+});
+
+app.delete('/api/v1/quizzes/:id', (request, response) => {
+  database('quizzes').where('id', request.params.id).del()
+  .then(() => {
+    database('quizzes').select()
+    .then((quiz) => {
+      response.status(200).json(quiz);
+    });
+  });
+});
+
 if (!module.parent) {
   app.listen(app.get('port'), () => {
   });

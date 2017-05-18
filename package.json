@@ -24,15 +24,13 @@
     "mocha": "^3.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha",
+    "start": "node server.js",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marissa27/trivia-time.git"
   },
-  "author": "Marissa Reinke",
-  "bugs": {
-    "url": "https://github.com/marissa27/trivia-time/issues"
-  }
+  "author": "Marissa Reinke"
 }
