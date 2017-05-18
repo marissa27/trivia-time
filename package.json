@@ -4,7 +4,9 @@
   "description": "Build out a Backend that stores trivia questions in different quizzes.",
   "main": "server.js",
   "dependencies": {
+    "babel-eslint": "^7.2.3",
     "body-parser": "^1.17.1",
+    "eslint": "^3.19.0",
     "express": "^4.15.2",
     "knex": "^0.13.0",
     "pg": "^6.2.2"
@@ -13,8 +15,12 @@
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
     "mocha": "^3.4.1"
   },
   "scripts": {
@@ -24,11 +30,8 @@
     "type": "git",
     "url": "git+https://github.com/marissa27/trivia-time.git"
   },
-  "keywords": [],
   "author": "Marissa Reinke",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/marissa27/trivia-time/issues"
-  },
-  "homepage": "https://github.com/marissa27/trivia-time#readme"
+  }
 }
