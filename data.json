@@ -1,6 +1,7 @@
 {
     "results": [{
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "hard",
             "question": "True or false: In World War I, Japan was in the Allied Powers (Entente) ",
@@ -11,6 +12,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The Cold War ended with Joseph Stalin&#039;s death.",
@@ -21,6 +23,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The Tiananmen Square protests of 1989 were held in Hong Kong.",
@@ -31,6 +34,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "medium",
             "question": "The two atomic bombs dropped on Japan by the United States in August 1945 were named &#039;Little Man&#039; and &#039;Fat Boy&#039;.",
@@ -41,6 +45,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The Spitfire originated from a racing plane.",
@@ -51,6 +56,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "medium",
             "question": "In World War II, Hawker Typhoons served in the Pacific theater.",
@@ -61,6 +67,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "medium",
             "question": "The M41 Walker Bulldog remains in service in some countries to this day.",
@@ -71,6 +78,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "hard",
             "question": "The Kingdom of Prussia briefly held land in Estonia.",
@@ -81,6 +89,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "hard",
             "question": "Joseph Stalin&#039;s real name was Ioseb Bessarionis dze Dzugashvili.",
@@ -91,6 +100,7 @@
         },
         {
             "category": "History",
+            "id": 1,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Sargon II, a king of the Neo-Assyrian Empire, was a direct descendant of Sargon of Akkad.",
@@ -101,6 +111,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Assyrian king Sennacherib&#039;s destruction of Babylon in 689 BC was viewed as a triumph by other Assyrian citizens.",
@@ -111,6 +122,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "medium",
             "question": "&quot;I disapprove of what you say, but I will defend to the death your right to say it&quot; is a quote from French philosopher Voltaire.",
@@ -121,6 +133,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Brezhnev was the 5th leader of the USSR.",
@@ -131,6 +144,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The United States Department of Homeland Security was formed in response to the September 11th attacks.",
@@ -141,6 +155,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The United States was a member of the League of Nations.",
@@ -151,6 +166,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "easy",
             "question": "United States President John F. Kennedy was assassinated during his presidential motorcade in Atlanta, Georgia on November 22nd, 1963.",
@@ -161,6 +177,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "medium",
             "question": "If you grab the bladed end of a longsword in a specific way, you will not cut yourself.",
@@ -171,6 +188,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "hard",
             "question": "The fourth funnel of the RMS Titanic was fake designed to make the ship look more powerful and symmetrical.",
@@ -181,6 +199,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "easy",
             "question": "Former United States Presidents John Adams and Thomas Jefferson died within hours of each other.",
@@ -191,6 +210,7 @@
         },
         {
             "category": "History",
+            "id": 2,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Theodore Roosevelt Jr. was the only General involved in the initial assault on D-Day.",
@@ -201,6 +221,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "easy",
             "question": "Adolf Hitler was a german soldier in World War I.",
@@ -211,6 +232,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "In 1967, a magazine published a story about extracting hallucinogenic chemicals from bananas to raise moral questions about banning drugs.",
@@ -221,6 +243,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "easy",
             "question": "The United States of America declared their independence from the British Empire on July 4th, 1776.",
@@ -231,6 +254,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Abraham Lincoln was the first U.S. President to be born outside the borders of the thirteen original states. ",
@@ -241,6 +265,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "United States President Ronald Reagan was the first president to appoint a woman to the Supreme Court. ",
@@ -251,6 +276,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "The Hundred Years&#039; War was fought for more than a hundred years.",
@@ -261,6 +287,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Martin Luther King Jr. and Anne Frank were born the same year. ",
@@ -271,6 +298,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "medium",
             "question": "Oxford University is older than the Aztec Empire. ",
@@ -281,6 +309,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "hard",
             "question": "The USS Missouri (BB-63) last served in the Korean War.",
@@ -291,6 +320,7 @@
         },
         {
             "category": "History",
+            "id": 3,
             "type": "boolean",
             "difficulty": "easy",
             "question": "Kublai Khan is the grandchild of Genghis Khan?",
