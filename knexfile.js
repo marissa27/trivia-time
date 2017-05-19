@@ -16,12 +16,11 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL || 'postgres://localhost/thetrivia_test',
     migrations: {
-      directory: './db/migrations'
+      directory: './db/migrations',
     },
     seeds: {
-      directory: './db/seeds/test'
+      directory: './db/seeds/test',
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
   },
-
 };
