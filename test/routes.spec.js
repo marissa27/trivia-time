@@ -153,7 +153,7 @@ describe('Everything', () => {
     });
 
     describe('POST /api/v1/quizzes', () => {
-      it('should create new quiz', (done) => {
+      it.skip('should create new quiz', (done) => {
         chai.request(server)
           .post('/api/v1/quizzes')
           .send({
@@ -190,7 +190,7 @@ describe('Everything', () => {
     });
 
     describe('POST /api/v1/quizzes/:quiz_id/query', () => {
-      it('should create new question', (done) => {
+      it.skip('should create new question', (done) => {
         chai.request(server)
           .post('/api/v1/quizzes/1/query')
           .send({
