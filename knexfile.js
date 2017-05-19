@@ -28,7 +28,7 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL || 'postgres://localhost/thetrivia',
     migrations: {
-      directory: `${process.env.DATABASE_URL}?ssl=true`,
+      directory: './db/migrations',
     },
     seeds: {
       directory: './db/seeds/dev',
