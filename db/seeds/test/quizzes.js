@@ -21,21 +21,25 @@ exports.seed = function (knex, Promise) {
       knex.table('query')
       .insert([
         {
+          id: 1,
           question: 'is this a test?',
           answer: 'true',
           quiz_id: 1,
         },
         {
+          id: 2,
           question: 'is Pam the coolest',
           answer: 'true',
           quiz_id: 1,
         },
         {
+          id: 3,
           question: 'do I have a question?',
           answer: 'false',
           quiz_id: 2,
         },
         {
+          id: 4,
           question: 'is a question a question?',
           answer: 'true',
           quiz_id: 2,

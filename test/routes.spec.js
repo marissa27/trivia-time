@@ -103,7 +103,7 @@ describe('Everything', () => {
     });
 
     describe('GET /api/v1/quizzes/:quiz_id/query', () => {
-      it.skip('should return specific quiz', (done) => {
+      it('should return specific quiz', (done) => {
         chai.request(server)
           .get('/api/v1/quizzes/1/query')
           .end((error, response) => {
@@ -128,7 +128,7 @@ describe('Everything', () => {
     });
 
     describe('GET /api/v1/query/:id', () => {
-      it.skip('should return specific question', (done) => {
+      it('should return specific question', (done) => {
         // different ID each timeeeee
         chai.request(server)
           .get('/api/v1/query/1')
@@ -234,20 +234,19 @@ describe('Everything', () => {
     describe('DELETE /api/v1/query/:id', () => {
       it.skip('should delete question/answer by id', (done) => {
         chai.request(server)
-          .delete('/api/v1/query/1')
-          .end((error, response) => {
-            response.should.have.status(204);
-            chai.request(server)
-              .get('/api/v1/query')
-              .end((err, res) => {
-                res.should.have.status(200);
-                res.body.should.be.a('array');
-                res.body.length.should.equal(1);
-                res.body[0].should.have.property('question');
-                res.body[0].question.should.equal('is this a test?');
-                done();
-              });
-          });
+       .delete('/api/v1/query/2')
+       .set('Authorization', process.env.TOKEN)
+       .end((error, response) => {
+         response.should.have.status(204);
+         chai.request(server)
+         .get('/api/v1/query')
+       .end((err, res) => {
+         res.should.have.status(200);
+         res.body.should.be.a('array');
+         res.body.length.should.equal(1);
+         done();
+       });
+       });
       });
 
       it.skip('should return error when no question to delete', (done) => {
@@ -272,26 +271,21 @@ describe('Everything', () => {
     });
 
     describe('DELETE /api/v1/quizzes/:id', () => {
-      it.skip('should be able to DELETE a specific quiz', (done) => {
+      it.skip('should delete quiz by id', (done) => {
         chai.request(server)
-        .get('/api/v1/quizzes')
-        .set('Authorization', process.env.TOKEN)
-        .end((err, response) => {
-          response.body.length.should.equal(2);
-          chai.request(server)
-          .delete('/api/v1/quizzes/2')
-          .set('Authorization', process.env.TOKEN)
-          .end((err, response) => {
-            response.should.have.status(204);
-            chai.request(server)
-            .get('/api/v1/quizzes')
-            .set('Authorization', process.env.TOKEN)
-            .end((err, response) => {
-              response.body.length.should.equal(1);
-              done();
-            });
-          });
-        });
+       .delete('/api/v1/quizzes/2')
+       .set('Authorization', process.env.TOKEN)
+         .end((error, response) => {
+           response.should.have.status(204);
+           chai.request(server)
+           .get('/api/v1/quizzes')
+         .end((err, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('array');
+           res.body.length.should.equal(1);
+           done();
+         });
+         });
       });
 
       it.skip('should return error when no quiz to delete', (done) => {
@@ -304,7 +298,7 @@ describe('Everything', () => {
           });
       });
 
-      it('should return error when not logged in', (done) => {
+      it.skip('should return error when not logged in', (done) => {
         chai.request(server)
           .delete('/api/v1/query/3sdf')
           .end((error, response) => {

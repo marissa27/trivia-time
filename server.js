@@ -11,8 +11,9 @@ const database = require('knex')(configuration);
 const jwt = require('jsonwebtoken');
 const config = require('dotenv').config().parsed;
 
+app.set('secretKey', process.env.CLIENT_SECRET || config.CLIENT_SECRET);
+const token = jwt.sign('user', app.get('secretKey'));
 app.set('port', process.env.PORT || 3000);
-app.set('secretKey', config.CLIENT_SECRET);
 
 app.locals.title = 'Trivia Time';
 
@@ -203,12 +204,12 @@ app.patch('/api/v1/query/patch/:id', checkAuth, (request, response) => {
 });
 
 // DELETE
-app.delete('/api/v1/query/:id', (request, response) => {
+app.delete('/api/v1/query/:id', checkAuth, (request, response) => {
   database('query').where('id', request.params.id).del()
   .then(() => {
     database('query').select()
     .then((query) => {
-      response.status(200).json(query);
+      response.status(204).json(query);
     })
     .catch((error) => {
       error.status(403).send({
@@ -218,12 +219,12 @@ app.delete('/api/v1/query/:id', (request, response) => {
   });
 });
 
-app.delete('/api/v1/quizzes/:id', (request, response) => {
+app.delete('/api/v1/quizzes/:id', checkAuth, (request, response) => {
   database('quizzes').where('id', request.params.id).del()
   .then(() => {
     database('quizzes').select()
     .then((quiz) => {
-      response.status(200).json(quiz);
+      response.status(204).json(quiz);
     })
     .catch((error) => {
       error.status(403).send({
