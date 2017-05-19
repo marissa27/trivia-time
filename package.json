@@ -6,8 +6,10 @@
   "dependencies": {
     "babel-eslint": "^7.2.3",
     "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
     "eslint": "^3.19.0",
     "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.1",
     "knex": "^0.13.0",
     "pg": "^6.2.2"
   },
@@ -24,15 +26,12 @@
     "mocha": "^3.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marissa27/trivia-time.git"
   },
-  "author": "Marissa Reinke",
-  "bugs": {
-    "url": "https://github.com/marissa27/trivia-time/issues"
-  }
+  "author": "Marissa Reinke"
 }
