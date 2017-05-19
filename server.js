@@ -23,7 +23,7 @@ app.use(express.static('public'));
 
 const checkAuth = (request, response, next) => {
   const token = request.body.token ||
-                request.param('token') ||
+                // request.param('token') ||
                 request.headers['authorization'];
 
   if (token) {
