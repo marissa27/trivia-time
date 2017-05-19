@@ -12,7 +12,6 @@ const database = require('knex')(configuration);
 chai.use(chaiHttp);
 
 describe('Everything', () => {
-  this.timeout(9000);
 
   before((done) => {
     database.migrate.latest()
