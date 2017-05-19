@@ -41,8 +41,6 @@ exports.seed = function (knex, Promise) {
     return Promise.all(questionPromise);
   })
   .catch((error) => {
-    error.status(403).send({
-      error: 'No questions here.',
-    });
+    console.log(error)
   });
 };
