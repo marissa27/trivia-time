@@ -23,4 +23,16 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL || 'postgres://localhost/thetrivia',
+    migrations: {
+      directory: './db/migrations',
+    },
+    seeds: {
+      directory: './db/seeds/dev',
+    },
+    useNullAsDefault: true,
+  },
 };
