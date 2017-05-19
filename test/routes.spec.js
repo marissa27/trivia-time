@@ -12,21 +12,21 @@ const database = require('knex')(configuration);
 chai.use(chaiHttp);
 
 describe('Everything', () => {
-  beforeEach((done) => {
+  before((done) => {
     database.migrate.latest()
-      .then(() => {
-        return database.seed.run();
-      })
-      .then(() => {
-        done();
-      });
+    .then(() => {
+      return database.seed.run();
+    })
+    .then(() => {
+      done();
+    });
   });
 
-  afterEach((done) => {
+  beforeEach((done) => {
     database.seed.run()
-      .then(() => {
-        done();
-      });
+    .then(() => {
+      done();
+    });
   });
 
   describe('Client Routes', () => {
